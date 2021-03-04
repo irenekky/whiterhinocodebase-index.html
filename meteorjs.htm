@@ -1,0 +1,3053 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Keywords" content="HTML,CSS,JavaScript,DOM,Bootstrap,
+Web,W3C,tutorials,programming,development,training,
+learning,quiz,primer,lessons,reference,examples,source code,colors,demos,tips,w3c">
+<title>Meteor. js</title>
+<link rel="stylesheet" href="W3.css">
+</head>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Elisa Laukkanen</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>CHACHA</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>6</o:TotalTime>
+  <o:Created>2021-03-01T04:04:00Z</o:Created>
+  <o:LastSaved>2021-03-01T04:04:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>7823</o:Words>
+  <o:Characters>44594</o:Characters>
+  <o:Lines>371</o:Lines>
+  <o:Paragraphs>104</o:Paragraphs>
+  <o:CharactersWithSpaces>52313</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="meteorjs_files/themedata.thmx">
+<link rel=colorSchemeMapping href="meteorjs_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-GB</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:.15pt;
+	margin-left:.5pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-.5pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;}
+h1
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:46.55pt;
+	margin-left:.5pt;
+	text-indent:-.5pt;
+	line-height:110%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo1;
+	font-size:14.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;
+	mso-font-kerning:0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:27.45pt;
+	margin-left:.5pt;
+	text-indent:-.5pt;
+	line-height:129%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo1;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:27.45pt;
+	margin-left:.5pt;
+	text-indent:-.5pt;
+	line-height:129%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;
+	mso-bidi-font-weight:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:5.5pt;
+	margin-bottom:6.2pt;
+	margin-left:1.25pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-.5pt;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:5.5pt;
+	margin-bottom:6.2pt;
+	margin-left:23.95pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-.5pt;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Arial;
+	color:black;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("meteorjs_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("meteorjs_files/header.htm") fcs;
+	mso-endnote-separator:url("meteorjs_files/header.htm") es;
+	mso-endnote-continuation-separator:url("meteorjs_files/header.htm") ecs;
+	mso-facing-pages:yes;}
+@page WordSection1
+	{size:595.3pt 842.05pt;
+	margin:70.9pt 79.95pt 71.8pt 85.1pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:42.7pt;
+	mso-even-footer:url("meteorjs_files/header.htm") ef1;
+	mso-footer:url("meteorjs_files/header.htm") f1;
+	mso-first-footer:url("meteorjs_files/header.htm") ff1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1238443976;
+	mso-list-template-ids:-871049634;}
+@list l0:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:%3;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level4
+	{mso-level-text:%4;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:%5;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-text:%6;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level7
+	{mso-level-text:%7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:%8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:%9;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:0in;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	border:none;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	text-underline:black;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+	vertical-align:baseline;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB>
+    <div class="w3-center">
+       <p class="w3-right">whiterhinoschool@gmail.com</p>
+    <img class="w3-logo w3-left" src="images/whiterhino.jpg"><img>
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="XRVHR3RK7J522" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+        
+
+
+
+   </div>
+        <div class="w3-bar w3-teal">
+            
+            <a href="/index.html" class="w3-bar-item w3-button">Home</a></li>
+            <a href="/backend.html" active class="w3-bar-item w3-button">Back end developement</a></li>
+            <a href="/frontend.html" class="w3-bar-item w3-button">Front end developement</a></li>
+            <a href="/fullstack.html" class="w3-bar-item w3-button w3-black">Fullstack developement</a></li>
+           
+            
+            
+            
+            
+           
+            
+            
+        
+       
+    </div>
+                
+                <div class='w3-bar'>
+           
+                    <a href="myhtm.html"   class="w3-bar-item w3-button w3-white">Html</a>
+                    <a href="css.html"  active class="w3-bar-item w3-button w3-white">Css</a>
+                    <a href="javascript.htm" class="w3-bar-item w3-button w3-black" >Javascript</a>
+                    <a href="sql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - SQL</a>
+                    <a href="nosql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - NoSQL</a>
+                    <a href="frameworks.html"  class="w3-bar-item w3-button w3-white">Frame works and libraries</a>
+            
+                    </div>
+                    <div class="w3-container" style="margin-right: 200px; margin-left: 200px;" />
+
+<div class=WordSection1>
+	<div class="w3-container" style="margin-right: 200px; margin-left: 200px;" />
+
+
+<div class="w3-container w3-center">
+
+
+<a href="mean.htm" class="w3-button w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E .  A . N stack</a>&nbsp; &nbsp;
+
+
+
+<a href="mern.htm" class="w3-button w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E .  R . N stack</a>&nbsp; &nbsp;
+
+<a href="mevn.htm" class="w3-button w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E. V. N stack</a>&nbsp; &nbsp;
+
+<a href="meteorjs.htm" class="w3-button w3-black w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">METEOR.JS</a>&nbsp; &nbsp;
+
+
+<h1 class="w3-center" />METEOR . JS
+
+
+
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%;tab-stops:right 428.1pt'><span
+style='mso-spacerun:yes'></span><span style='mso-tab-count:1'> </span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;mso-bidi-font-size:
+11.0pt;line-height:107%'><span style='mso-spacerun:yes'></span></span></b></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:427.5pt;
+margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:left;
+text-indent:0in'><span style='mso-spacerun:yes'></span><span
+style='mso-spacerun:yes'></span><br clear=all style='mso-special-character:
+line-break;page-break-before:always'>
+</p>
+
+<h1 style='margin-left:20.85pt;text-indent:-.3in;mso-list:l0 level1 lfo1'><a
+name="_Toc27760"><![if !supportLists]><span style='mso-bidi-font-size:14.0pt;
+line-height:110%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>METEOR
+FRAMEWORK </a></h1>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.0pt;
+margin-left:-.25pt'>Meteor JS is an open-source full stack JavaScript-based
+framework used for developing web and mobile applications. It consists of
+existing technologies that are combined to create the building blocks of an
+application. The components may vary depending on the application requirements.
+<a name="_Toc27761"></a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.0pt;
+margin-left:-.25pt'><span style='mso-bookmark:_Toc27761'>Meteor.JS </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor was founded 2011 by Meteor Development Group (MDG)
+with an aim of providing open source platform for web application development.
+Several months after the released MDG got financial boost from major companies
+in the software industry. Meteor growth was quick because it provided support
+especially by basic development infrastructure such as data synchronization and
+compiling the code. Therefore, the developers could only concentrate on the
+business functionality of the application. With more support from the
+investors, Meteor focuses to target larger enterprises and adding more
+development tools to developers. The current version of Meteor.JS is 1.4 and it
+supports both Windows and Linux operating systems. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor main objective was initially to create basic
+infrastructure such data synchronization that deploy an application on web or
+mobile devices. MDG also focused on the use of software libraries that can be
+customized from the existing Node.js modules to implement the functionality.
+Another area was to promote the use of standardized protocols such as
+Distributed Data Protocol (DDP) and the ability to provide service for the
+developer. </p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:2.2pt;
+margin-bottom:5.75pt;margin-left:0in;text-align:center;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor development platform consist technologies that
+contribute to the development process of the application. The technologies are
+build tools, a collection of software packages, web sockets and MongoDB. Meteor.JS
+development process uses JavaScript in all environments; application server,
+web browser and mobile device, that runs in both frontend and backend and uses
+same application programming interface (API). The combined technologies enable
+the developer to builds reactive application. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:0in;
+margin-bottom:2.85pt;margin-left:0in;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1500" o:spid="_x0000_i1053" type="#_x0000_t75"
+ style='width:425.25pt;height:273.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image001.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=365
+src="meteorjs_files/image002.jpg" v:shapes="Picture_x0020_1500"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>FIGURE 1. Meteor Stack Components </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The figure 1 above illustrates a summary of the core
+components needed to run a Meteor application. Regarding the server side, it
+consists MongoDB, Node.js and application code. MongoDB provides storage for
+the data and Node.js is a server side JavaScript environment, it is highly scalable
+runtime environment and an event driven. It has the similar functions as an
+Apache web server in LAMP (Linux, Apache, MySQL and PHP). Finally, the
+application code comprises of packages that provide and enforce the
+functionality of the application. The example of these functionalities includes
+OAuth logins, request routing and reactive UI. (Hochhaus &amp; Schoebel 2015b,
+6.) </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Build tool such as CLI assist in creating and managing the
+infrastructure of the development environment by quickening the process setting
+up the workflow which involves a lot installing or configuring using these
+tools. In Meteor development environment community packages such as npm and
+atmosphere provide several tools, adding authentication through Gmail OAuth or
+Facebook OAuth can be implemented quickly by Meteor user accounts to the
+packages list.<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:25.95pt;
+margin-left:-.25pt'>The browser and mobile platform deploy the application and
+interact with the user. Therefore, through designing and testing Meteor stack
+core packages are integrated to work well without any conflict within the
+packages. Despite the using specific core packages with Meteor, it is also
+possible to use other technologies supported by Meteor.JS such as using
+Angular.JS on the client side instead of Blaze.JS.<span
+style='mso-spacerun:yes'> </span></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27762"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Packages</a><span
+style='mso-bookmark:_Toc27762'><span style='font-weight:normal'> </span></span></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Package system facilitates the development of an
+application and it is easy to customize i.e. adding and removing the
+functionality (Strack 2015a). These packages are available in the atmosphere.js
+and package stars and flags. The atmosphere contains many packages of which
+majority supports Meteor and is used in developing Meteor application (Meteor
+2017a). They are community based packages developed by individuals or
+organization and used by any interested person for free. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>According to Strack, within a period of 4 years MDG had
+developed over 140 packages. These packages not only provide features and
+functionalities but they are customizable and easy implement on the project
+(Strack 2015b). </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor consist of core packages that are used to implement
+the functionality of the application such as Blaze package which is used to
+implement a reactive user interface (UI) library and UserAccounts package that
+manage the user accounts libraries, just to name but a few. The packages can be
+customized by extending the existing packages that had been already developed
+or it can be installed from node.js modules through node package manager (npm).
+(Hochhaus &amp; Schoebel 2015a, 5) </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The installation of the package to Meteor application is
+done by adding the name of the package from the atmosphere.js through the
+command prompt. A package can also be installed in the application by typing in
+the name of the package into the package folder in Meteor application. The line
+of Code in Figure 2 below show an example of installing Blaze.js. These command
+is run in the command prompt and the installation the blaze package to Meteor
+application will run automatically. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:0in;
+margin-bottom:2.95pt;margin-left:0in;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1639" o:spid="_x0000_i1052" type="#_x0000_t75" style='width:425.25pt;
+ height:33pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image003.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=44
+src="meteorjs_files/image004.jpg" v:shapes="Picture_x0020_1639"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 2 Blaze.JS Package. </i></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27763"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Blaze.JS
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Blaze is a rendering library build in meteor that is used
+to create user interface (UI), with blaze it is possible to write reactive HTML
+templates.<span style='mso-spacerun:yes'> </span>Reactive template can listen
+and update automatically to changes incurred by the JavaScript code in the
+mini-Mongo database from the directives that is integrated with tracker library
+and reflect the result on Document Object Model (DOM). Therefore, Blaze reacts
+to the JavaScript code that listens to changes in the mini-mongo. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Blaze contains a compiler that runs against Blaze runtime
+library which supports template syntax and compiles files from the template
+files into JavaScript UI components. The UI templates contain Spacebars that
+render the reactive and dynamic data context. (Blaze 2017a.) Spacebars is
+templating language used by Meteor inspired by Handlebars (Strack 2015c). </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Block tags are JavaScript helpers that are either build-in
+or custom that passes a template when initiated by a directive or helper. There
+are different template tags that are used for different purposes for example
+control structures such as conditions and loops. Block helpers such as {{#if}},
+{{#Unless}}, {{#with}}, {{#each}}, {{#let}} are build-in tags and the
+difference with custom block helpers is that the template must be declared then
+invoked in the double curly braces. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.35pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1761" o:spid="_x0000_i1051" type="#_x0000_t75" style='width:425.25pt;
+ height:56.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image005.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=75
+src="meteorjs_files/image006.jpg" v:shapes="Picture_x0020_1761"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 3. Spacebars. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The figure 3 above show an example of spacebars in a
+template where the data context such as head, text, section or description is
+expected to be rendered, the names are objects with key. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The template layout on figure 4 below is used to
+render<span style='mso-spacerun:yes'> </span>template into to the main area
+using spacebars.<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:2.85pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1763" o:spid="_x0000_i1050" type="#_x0000_t75" style='width:425.25pt;
+ height:54pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image007.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=72
+src="meteorjs_files/image007.jpg" v:shapes="Picture_x0020_1763"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 4. Spacebars rendering main template.
+</i></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Another dynamic template block can also be added to the
+template which can be conditionally rendered or switched between multiple
+layouts. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.45pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1855" o:spid="_x0000_i1049" type="#_x0000_t75" style='width:425.25pt;
+ height:126.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=169
+src="meteorjs_files/image009.jpg" v:shapes="Picture_x0020_1855"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 5.<span style='mso-spacerun:yes'>
+</span>map template </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The main variable from the figure 5 above connects to the
+name of the template that is rendered with Template. Dynamic by passing it
+through BlazeLayout.render(). Therefore, according to the figure 6<span
+style='mso-spacerun:yes'> </span>below the template map will be rendered. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1857" o:spid="_x0000_i1048" type="#_x0000_t75" style='width:425.25pt;
+ height:84pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=112
+src="meteorjs_files/image011.jpg" v:shapes="Picture_x0020_1857"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:31.45pt;margin-left:-.25pt;text-align:left;line-height:110%'><span
+style='mso-spacerun:yes'></span><i style='mso-bidi-font-style:normal'>Figure
+6. Blaze Layout Rendering. </i></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27764"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Reactivity
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor uses web sockets to allow communication in both ways
+between the client and server, these enables structured data to be fetched from
+server to client through Distributed Data Protocol (DDP) and receives live
+updates when the data is changed. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:58.85pt;
+margin-bottom:3.0pt;margin-left:0in;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1933" o:spid="_x0000_i1047" type="#_x0000_t75" style='width:310.5pt;
+ height:192.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=414 height=257
+src="meteorjs_files/image013.jpg" v:shapes="Picture_x0020_1933"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>FIGURE 7. DDP (Hochhaus &amp; Schoebel 2015,
+10).<span style='mso-spacerun:yes'> </span></i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>As shown in the figure 7 above the processing of data from
+a single server and distributing to multiple clients empower the browser to act
+as a smart client because the server pushes updated content to the connected
+clients. The use of DDP results in quick response time because less data is
+transferred from server to client and the processing of data avoids the long
+running request. (Hochhaus &amp; Schoebel 2015c, 10).<span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The communication within the applications is done over both
+HTTP and Web Sockets. During page request, static resources are transferred
+over HTTP. While the exchange of data between client and server rely on DDP,
+SockJS provides the infrastructure. The server returns the data as JavaScript
+Object Notation (JSON) objects. </p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:0in;text-align:center;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_1935"
+ o:spid="_x0000_i1046" type="#_x0000_t75" style='width:409.5pt;height:225.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=546 height=301
+src="meteorjs_files/image015.jpg" v:shapes="Picture_x0020_1935"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>FIGURE 8. Communication between the server
+and the client (Hochhaus &amp; Schoebel 2015, 14).<span
+style='mso-spacerun:yes'> </span></i></p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:2.2pt;
+margin-bottom:5.75pt;margin-left:0in;text-align:center;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>According to figure 8 the role of Live query assists in
+detecting the changes or update in the database and pushing the changes to the
+client through subscription. It updates the clients automatically without
+refreshing the page for the changes to be reflected on the client side. This is
+because of the distributed environment meteor uses. (Hochhaus &amp; Schoebel
+2015d, 15).<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Tracker library enables transparent reactivity; it
+automatically listens to each template helper, if there is any value change in
+the mini-Mongo it evaluates to a new value. Tracker helps in developing a
+transparent reactive programming by providing crucial functional reactive
+programming (FRP). The FRP has dependencies that are connected to data and
+function that detect the changes if incurred by invalidating the current
+context and execute the new data. (Hochhaus &amp; Schoebel 2015e, 14-15).<span
+style='mso-spacerun:yes'> </span>The tracker helps developers to avoid
+defining or declaring explicit data dependencies of each template helper
+because of the ability to re-render. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.85pt;
+margin-left:-.25pt'>Template syntax such as handlebars is mostly in Blaze
+because of the<span style='mso-spacerun:yes'> </span>clarity and
+readability.<span style='mso-spacerun:yes'> </span></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27765"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Flow
+Router </a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Flow Router is a front-end router for an application.
+Routing is the change of UI by calling an action on the Uniform Resource
+Identifier (URL). When an application loads in Meteor all the data available on
+the server is also reflected on the client-side, this is due to DDT which
+subscribe to data, therefore the URL will represent the current state of the
+user and does not render. (Meteor 2017b.) </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Figure 9 shows how to install flow router package to meteor
+application by adding through the command line. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:0in;
+margin-bottom:2.85pt;margin-left:0in;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2090" o:spid="_x0000_i1045" type="#_x0000_t75" style='width:425.25pt;
+ height:30.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image016.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=41
+src="meteorjs_files/image017.jpg" v:shapes="Picture_x0020_2090"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 9. Flow router </i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The route matches the URLs pattern on the browser which
+runs on the client side to perform certain action. There are two type of
+routes; single route and grouped route. Figure 10 shows the definition of a
+single route. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2174" o:spid="_x0000_i1044" type="#_x0000_t75" style='width:425.25pt;
+ height:84pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=112
+src="meteorjs_files/image018.jpg" v:shapes="Picture_x0020_2174"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:31.45pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 10. Defining a single route </i></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27766"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>MongoDB
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>MongoDB is the database used by meteor to store data layer
+as objects.<span style='mso-spacerun:yes'> </span>The data in MongoDB is
+accessed through a collection, which is a set of related data. A collection can
+be created on several places on Meteor framework such as server-side
+collection, client-side collection or local collection. (Meteor 2017c.)
+Therefore, since there will is no directed connection to MongoDB database the
+client-side collection will be cache to the database this is possible because
+of minimongo library. Mini-mongo consist of JavaScript code that helps in data
+transfer through subscription and publication. Meteor applications are based on
+DDT, this allows data to be transferred in both server and client unlike the
+Http-based application that requires request from the client and respond from
+the server. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>MongoDB is a NoSQL database hence a non-relational database
+and therefore it uses a nested document structure to facilitate relationship.
+MongoDB provides the developer with unique query operations. The query enables
+the developer to access and manage data such as creating, reading, updating and
+destroying. These operations are not possible with plain JavaScript. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:5.75pt;
+margin-left:-.25pt;line-height:107%'>(Robinson J. et al, 2016). </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<h1 style='margin-top:0in;margin-right:0in;margin-bottom:48.45pt;margin-left:
+20.85pt;text-indent:-.3in;mso-list:l0 level1 lfo1'><a name="_Toc27767"><![if !supportLists]><span
+style='mso-bidi-font-size:14.0pt;line-height:110%;mso-bidi-font-weight:bold'><span
+style='mso-list:Ignore'>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>IMPLEMENTATION </a></h1>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27768"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Overview
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The application enables the user to use a camera from the
+device to capture and store the images in the database. A map displays icons if
+the item is available, the display is on the location where the item was
+uploaded to the application. Instant messaging feature facilitate the
+communication between two users. The user received a text notification if
+someone is interested in acquiring the item.<span style='mso-spacerun:yes'>
+</span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.0pt;
+margin-left:-.25pt'>Meteor application will be developed to demonstrate Meteor
+features and development process. First, setting up the development environment
+by installing necessary tools. Then the required packages will be added
+individually as the development progresses. Finally, it will be hosted in cloud
+9 for testing purposes. The addition of packages to the application does not
+require a specific order. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27769"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Meteor
+installation and setup </a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The development process begins by installing meteor
+framework and atom editor. To install Meteor on windows Meteor installer is
+downloaded from the documentation and it is executed by running an install
+command. Similarly, the atom editor can also be install from Atom official
+website. Meteor documentation is important during the whole process. It
+provides necessary information and guidelines for setting up meteor
+application.<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The packages required are installed independently as the
+development progress. In case a mobile application had to be developed Cordova
+package is required therefore it is installed separately.<span
+style='mso-spacerun:yes'> </span>Once Meteor is installed the process of
+creating the application begins. The figure 11<span style='mso-spacerun:yes'>
+</span>shows the initial stage of creating and running the meteor application
+from the terminal. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:427.5pt;
+margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:left;
+text-indent:0in;line-height:149%'><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:38.65pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2325" o:spid="_x0000_i1043" type="#_x0000_t75" style='width:389.25pt;
+ height:275.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image019.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=519 height=367
+src="meteorjs_files/image020.jpg" v:shapes="Picture_x0020_2325"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 11. Installing and running Meteor </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:5.75pt;
+margin-left:-.25pt;line-height:107%'>On the final stages the application is
+uploaded to Cloud9 environment. To run the application on </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.0pt;
+margin-left:-.25pt'>Cloud9 Meteor.JS should be install on an empty workspace
+created on Cloud9. Thereafter, Meteor.JS files from the local workstation
+folder is uploaded to the workspace. Node packages required by Meteor
+application are also installed. Finally running the application using port
+option because Cloud9 does not support automatic ports. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27770"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Application
+Structure </a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>After the installation Meteor application, it contains a
+default structure. The structure contains HTML, JavaScript and CSS files. Apart
+from the imports and public folder the other folders are default and they are
+created once Meteor.JS is install. The public folder contains images and logos
+that are used in the application both on the client and on the server. The
+import folder contains subfolders such as api, lib and ui. The api contains the
+collections, the collection is exported in and out of the import folder to any
+folder that requires the collection. The lib folder contains the routes that
+assists in connecting different folders. The ui consist of HTML and JavaScript
+files. The CSS files are in the client folder. Figure 12 show the overview of
+the application structure. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:208.5pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:center;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2349" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:219pt;
+ height:539.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image021.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=292 height=719
+src="meteorjs_files/image022.jpg" v:shapes="Picture_x0020_2349"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 12. Application Structure. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor.JS recommends that all the application code should
+be placed in the import directory. These will enable Meteor build system to
+access single import directory while looking for a file that is being
+referenced from either the server or the client.<span
+style='mso-spacerun:yes'> </span>The main.js files in client and server helps
+in defining the entry points to the client and server when the file are
+loading.<span style='mso-spacerun:yes'> </span></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27771"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>UI
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>After the installation Meteor application, it contains a
+default structure. The structure contains HTML, JavaScript and CSS files.
+Therefore, the first step is to examine the existing codes and make necessary
+adjustment. The whole process is carried out in the atom editor but when adding
+the package, the terminal is used. As mentioned earlier Bootstrap and Blaze
+packages are installed first. This provides the base where all other pages will
+be connected to and from. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.35pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2416" o:spid="_x0000_i1041" type="#_x0000_t75" style='width:425.25pt;
+ height:297.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image023.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=397
+src="meteorjs_files/image024.jpg" v:shapes="Picture_x0020_2416"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 13. Meteor application packages and
+folders. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The figure 13. Shows default packages after adding
+Bootstrap and Blaze.js. and folders that contains files of JavaScript, HTML,
+and CSS codes. Import and Public folder were added to the default settings. The
+current structure consists of the folders required for the Give and Get
+application. Meteor file structure is flexible therefore the structure can vary
+depending on the developer. From the above structure, each section can be
+customized separately. The UI folder contains pages of the application with
+JavaScript, HTML and CSS as the main components of the application code. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Bootstrap enables styling the user interface using HTML and
+CSS files. These helps in arranging the components and colors of a page. Other
+important use of bootstrap is that it enables the creation of responsive
+template. As a result, each page can be open on any device no matter the size
+of the display. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>On the other hand, Blaze enables the HTML template to react
+hence updating the content through spacebars. Therefore, since the UI contains
+Spacebars that react to data from minimongo such as creating icons on the map,
+this enables the page to display the change content without requiring the user
+to refresh the page. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:2.95pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2448" o:spid="_x0000_i1040" type="#_x0000_t75" style='width:425.25pt;
+ height:450.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image025.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=601
+src="meteorjs_files/image026.jpg" v:shapes="Picture_x0020_2448"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 14. Login template. </i></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><i style='mso-bidi-font-style:
+normal'><span style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:25.95pt;
+margin-left:-.25pt'>The figure 14 above shows an example from the login page. The
+login template is rendered when the user is required to login to the
+application. These template is imported to login JavaScript folder where the
+validation of the username and password verified. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27772"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Routing
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The flow router responsibility is to perform some action
+when the user visits a URL and blaze assist in rendering the template which
+contains the content of the page. According to the application structure on
+figure 15, the application lib folder containing routes.js consist of all
+routes that link to the pages of application. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Flow router also can use parameters to pass and argument.
+For example, as shown in figure 15 below, when the user clicked on the icon on
+the map, the parameter gets and passes the _id of that object and retrieve
+content of the object and displaying it to the user. The benefits of using
+parameters enables an individual or several arguments to be passed through. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.45pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:1.45pt;
+margin-bottom:2.85pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2505" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:425.25pt;
+ height:132.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image027.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=177
+src="meteorjs_files/image028.jpg" v:shapes="Picture_x0020_2505"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 15 Routes passing a parameter. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:427.5pt;
+margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt;text-align:left;
+text-indent:0in;line-height:150%'><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:25.45pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2536" o:spid="_x0000_i1038" type="#_x0000_t75" style='width:402pt;
+ height:501.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image029.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=536 height=669
+src="meteorjs_files/image030.jpg" v:shapes="Picture_x0020_2536"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 16 Routes folder. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>As shown in the figure 16 above the management of the
+routes is easy and quick. All JavaScript files are imported to the routes
+folder. To render a template to a page Blaze action method is required. The
+action method passes two arguments; the name of the layout template and then the
+object containing regions that passes the template names to render. The name is
+to be rendered in the main section of the dynamic template.<span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2607" o:spid="_x0000_i1037" type="#_x0000_t75" style='width:425.25pt;
+ height:147pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image031.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=196
+src="meteorjs_files/image032.jpg" v:shapes="Picture_x0020_2607"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 17. Rendering dynamic template. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.9pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:25.95pt;
+margin-left:-.25pt'>Figure 17 shows how the content template that contains the
+dynamic template and is passed to the main body. Meteor dynamic template acts
+as a placeholder where actual template is loaded by Blaze layout action method.
+Therefore, whatever is being passed by Blaze action method such as name or
+templates are taken and assigned to the dynamic template. This enables several
+templates to be into a single layout, but for the example above only one layout
+is required. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27773"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Database
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Meteor stores data in a collection when using MongoDB. A
+collection can be created on either on the client or on the server. The
+collection for these application is created on the client and then imported to
+the server. The figure 18 show the location where the collection and how it is
+created on the client, it creates a cache that is connected to the server. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.35pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:13.2pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2609" o:spid="_x0000_i1036" type="#_x0000_t75" style='width:414.75pt;
+ height:102.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image033.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=553 height=137
+src="meteorjs_files/image034.jpg" v:shapes="Picture_x0020_2609"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure18 Creating a collection. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The collection can be exported to anywhere that is required
+within the application. That is why the it is created outside the server and
+the client because it can be accessed easily in both sections. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt;line-height:107%'>The most important import of these
+collection is to the server. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The database structure of the application consists of
+items, message, account configuration and users collections. The figure
+19<span style='mso-spacerun:yes'> </span>shows the structure of the
+collections in MongoDB. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.45pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2699" o:spid="_x0000_i1035" type="#_x0000_t75" style='width:425.25pt;
+ height:79.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image035.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=106
+src="meteorjs_files/image036.jpg" v:shapes="Picture_x0020_2699"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 19. the collection structure. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The items collection contains items added as object,
+message collection contains message conversation. These items and message
+collection are created but the account configuration and users collection are
+created automatically when installing account package. The account
+configuration contains the authentication files while the users collection
+contains the number of users that has the account.<span
+style='mso-spacerun:yes'> </span>These data layers are stored in MongoDB.
+Through the client console data can be manipulated in the collection. The
+function such as can find (), fetch (), insert (), update () or remove () helps
+in manipulating data in a collection. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.1pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2701" o:spid="_x0000_i1034" type="#_x0000_t75" style='width:425.25pt;
+ height:148.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image037.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=198
+src="meteorjs_files/image038.jpg" v:shapes="Picture_x0020_2701"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 20 Importing a collection to server. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>As shown on the figure 20 the server will be able to read
+the main collection from the API folder on the client. Therefore, if there are
+any changes to the client collection it will still be reflected on the imported
+collection on the server because they both share same collection. The syntax of
+importing a collection to the server and client are different. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:2.85pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2770" o:spid="_x0000_i1033" type="#_x0000_t75" style='width:425.25pt;
+ height:272.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image039.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=363
+src="meteorjs_files/image040.jpg" v:shapes="Picture_x0020_2770"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 21 Importing a collection to the client.
+</i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>There is situation where the collection is required on the
+client. The figure 21 show how to import a collection, once the template is
+accessible to a collection the data in the can added, updated, removed or
+subscribed. Meteor installation consist of default setting such as autopublish
+and insecure. These enables the user to access the database from the client,
+hence making the database insecure. Therefore, the safer way to access into the
+database is through a method. </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:5.75pt;
+margin-left:-.25pt;line-height:107%'>The two default packages i.e. autopublish
+and insecure are removed from the application. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'><span style='mso-spacerun:yes'></span>From the figure 21
+to read an object in the database a method find () and name of the collection
+is used, the user id can also be passed to get specific data created by same
+user. Similarly, to update or delete an object the event handler is used to
+call a method that passes a specific id. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:2.85pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2809" o:spid="_x0000_i1032" type="#_x0000_t75" style='width:425.25pt;
+ height:438.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image041.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=585
+src="meteorjs_files/image042.jpg" v:shapes="Picture_x0020_2809"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 22 Running Methods as server on the
+Client. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:26.0pt;
+margin-left:-.25pt'>The method for finding and removing data in the collection
+should be in the server, but since the collection in on the client under the
+import folder, the Meteor.isServer condition is used as shown in figure 22.
+Therefore, even though the codes are only executed when they are in the server
+the condition enables the methods to be executed by the server.<span
+style='mso-spacerun:yes'> </span></p>
+
+<h2 style='margin-left:30.8pt;text-indent:-31.55pt;mso-list:l0 level2 lfo1'><a
+name="_Toc27774"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Authentication
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>After installing Meteor account package, it consists of a
+basic account functionality which includes login and signup form. The account
+prevent usage until verification is complete. The UI of both pages had to match
+with the application as shown in the figure 23. The HTML files are imported to
+the JavaScript folder which handlers the event handlers. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.45pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2860" o:spid="_x0000_i1031" type="#_x0000_t75" style='width:342pt;
+ height:424.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image043.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=456 height=566
+src="meteorjs_files/image044.jpg" v:shapes="Picture_x0020_2860"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 23 Signup page.<span
+style='mso-spacerun:yes'> </span></i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left'>The signup form allows the user to create an account. Figure
+24 shows the JavaScript code that allows the user to create an account. When
+the user submits the username, email and password the event handler passes the
+information to a method in the account package. Account.creatUser method is
+responsible for creating the user. If there are any errors the method is called
+back and the error message is displayed to the user and there is no error the
+user is guided to home page through with router. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:19.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2888" o:spid="_x0000_i1030" type="#_x0000_t75" style='width:408pt;
+ height:4in;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image045.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=544 height=384
+src="meteorjs_files/image046.jpg" v:shapes="Picture_x0020_2888"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 24 Creating user account. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>During login, the user is required to submit the email and
+password. As shown in figure 25, the event handler passes the user details to
+be verified by Meteor.loginwithPassword method. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.4pt;margin-left:0in;text-align:left;text-indent:0in;line-height:
+107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:35.65pt;
+margin-bottom:3.1pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2890" o:spid="_x0000_i1029" type="#_x0000_t75" style='width:391.5pt;
+ height:223.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image047.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=522 height=298
+src="meteorjs_files/image048.jpg" v:shapes="Picture_x0020_2890"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 25 User Login. </i></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:25.95pt;
+margin-left:-.25pt'>The method checks if the user details are available. The
+user is directed to the home page if the verification is successful else error
+is sent to the user. The account also is used to authorize the user with the
+privileges of adding and deleting an item to the application and the ability to
+send a message. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27775"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Camera
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The implementation of the camera functionality begins with
+the installation of mdg camera package from athmosphere.js. The installation
+enables setting the connection between the camera and the application. The
+figure 26 show the events listeners and setting photo into session </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The event handler initiate the method which captures the
+photo and stores it in a session through a session. Set. The photo is stored in
+a session because there is other information that are still related to the
+image such as header, description and category. Therefore, once the all
+information is gathered they will be inserted to the collection and a document
+is created with primary key. The helper session. Get enables to retrieved the
+photo from the session before inserting into the database. The photo is cleared
+when the event handler submits and the item is inserted to the collection. Once
+all the information about the item is gathered, it is inserted to the item
+collection as a (Extended JavaScript Object Notation) EJSON object. The image
+is stored as based64 into the database. </p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:2.85pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2994" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:425.25pt;
+ height:489.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image049.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=653
+src="meteorjs_files/image050.jpg" v:shapes="Picture_x0020_2994"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:31.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 26 Setting up the Camera. </i></p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27776"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.9<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Instant
+messaging </a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Instant messaging requires a collection to store, therefore
+creating a collection in the api folder would be the first thing to consider.
+When the user sends the text the template event reads the value in the text
+field. The value is then saved into the collection created earlier. The value
+is save through a method. The method is created on the server side. Accessing
+the message collection from the server is more secure than on the client. Once
+the value is save the field is Cleared. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.45pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_3022" o:spid="_x0000_i1027" type="#_x0000_t75" style='width:425.25pt;
+ height:486.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image051.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=649
+src="meteorjs_files/image051.jpg" v:shapes="Picture_x0020_3022"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 27 Instant Messaging. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Figure 27 show how the event listeners capture the text
+from text field, delete events and helpers that retrieve data from the
+database.<span style='mso-spacerun:yes'> </span>The data from the message
+collection is published in the message collection and subscribed so that the
+text message could be displayed in the UI through handlebars. </p>
+
+<h2 style='margin-left:28.05pt;text-indent:-.4in;mso-list:l0 level2 lfo1'><a
+name="_Toc27777"><![if !supportLists]><span style='mso-bidi-font-size:12.0pt;
+line-height:129%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>2.10<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]>Map
+</a></h2>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The Google map is loaded upon startup through
+GoogleMaps.load() function. From the figure 28 the size and center of the map
+is described, this enables the map to load fully on any displaying page. The map
+gets the latitude and longitude coordinates of current position to display the
+map from the current location. The collection that contains the data collected
+from the add section is imported.<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:3.35pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_3063" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:425.25pt;
+ height:435pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image052.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=580
+src="meteorjs_files/image053.jpg" v:shapes="Picture_x0020_3063"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 28 Map. </i></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>This will enable the creating of the marker. Find and
+observe method checks the collection for the items individually and get the
+longitude and latitude coordinates as shown in figure 29. These coordinates
+enable the creation of a marker. Therefore, every time an item is added a
+marker is created based on those coordinates. The map also has an event
+listener. The marker is clicked uses the id of the marker and refers to the
+item in the collection from which the marker originated. Therefore, the item is
+displayed on the item list. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:2.3pt;
+margin-bottom:3.0pt;margin-left:-.05pt;text-align:right;text-indent:0in;
+line-height:107%'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_3089" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:425.25pt;
+ height:473.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="meteorjs_files/image054.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=567 height=631
+src="meteorjs_files/image055.jpg" v:shapes="Picture_x0020_3089"><![endif]></span><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.5pt;margin-left:-.25pt;text-align:left;line-height:110%'><i
+style='mso-bidi-font-style:normal'>Figure 29 Creating a marker. </i></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span></p>
+
+<h1 style='margin-left:20.85pt;text-indent:-.3in;mso-list:l0 level1 lfo1'><a
+name="_Toc27778"><![if !supportLists]><span style='mso-bidi-font-size:14.0pt;
+line-height:110%;mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>DISCUSSION
+</a></h1>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The objective of the thesis was to create a demo for
+learning purposes by developing a web application using Meteor.JS framework.
+The main requirement was to implement the functionality of the application. The
+other requirement was to create a responsive web application to enable a wide
+range of usage. Developing a native application is quite complex and requires
+more time, therefore the use of framework was considered. The benefit of
+framework is that it speeds up the development process. Apart from Meteor.JS
+there are other framework such as Ionic that can also be used to develop a web application.<span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Among other framework, Meteor.JS environment support the
+developers to accomplish the development process quickly also, embracing file
+structure and the use of latest technologies result into a better and reliable
+end-product. MongoDB is quite easy to use unlike the relational database.
+Packages such as Bootstrap and node.JS provides quick development of both
+frontend and back-end. Blaze.js and Flow-router is easy to implement especially
+for someone familiar with JavaScript. These technologies contribute largely to
+the development process also enable a quality product. For a beginner, it might
+be difficult to develop a product with less faults.<span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.85pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The development process provided an opportunity for
+learning and gaining experience. The use of different technologies recommended
+by Meteor framework increases the knowledge on JavaScript,Node.js MongoDB and
+Bootstrap also by using these technologies it enable one to understand how they
+connect and relate to one another. The documentation provided more information
+regarding the use and the best practice. The experience from the development
+process improves programming skills. Therefore, at the end of the process using
+other framework related to Meteor.JS can be much easier. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>The whole process of these thesis report can be a challenge
+especially for one who is not familiar with programming skills. The guidance
+from the documentation including sources from internet provided great
+assistance in the theory and development process. Meteor.JS framework proofed
+as easy and quick for development process. Software frameworks is beneficial to
+anyone who want to learn and familiarize with the concept of software
+development. Therefore, these demo could be used as a study material during lectures
+or even for self-study, The demo consist of<span style='mso-spacerun:yes'>
+</span>several functionalities, these provides a wide scope of learning
+material.<span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:-.25pt'>Regarding the future development of the application,
+security issues could still be improved. Currently a user can enter any value
+or submit and empty value to the application when adding a new item. These has
+to be checked whether the value has to be string, Boolean or integer so that
+the user does not give false information. Another improvement is the
+authentication, these application uses default authentication which is
+installed from account package. Meteor default authentication does not verify
+if the email address is legitimate. </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:5.75pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span><br clear=all style='mso-special-character:
+line-break;page-break-before:always'>
+</p>
+
+<h1 style='margin-left:-.25pt;text-indent:0in;mso-list:none'><a name="_Toc27779">REFERENCES
+</a></h1>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:10.9pt;
+margin-left:18.5pt;line-height:107%'>Blaze 2017a. Introduction. Cited
+15.3.2017,<a href="http://blazejs.org/guide/introduction.html"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><a
+href="http://blazejs.org/guide/introduction.html"><span style='color:blue'>http://blazejs.org/guide/introduction.html</span></a><a
+href="http://blazejs.org/guide/introduction.html"><span style='color:black;
+text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:9.95pt;
+margin-left:18.5pt;line-height:115%'>Berners-Lee, T. 2005. Uniform Resource
+Identifier (URI): Generic Syntax. Cited 27.3.2017, <a
+href="https://tools.ietf.org/html/rfc3986"><span style='color:blue'>https://tools.ietf.org/html/rfc3986</span></a><a
+href="https://tools.ietf.org/html/rfc3986"><span style='color:blue;text-decoration:
+none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>Hochhaus,
+S. &amp; Schoebel, M. 2015a. Meteor in action. The story behind Meteor. Cited
+13.3.2017,<a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>https://manning</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>content.s3.amazonaws.com/download/4/47f88a7</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>bff9</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>4144</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b834</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>Hochhaus,
+S. &amp; Schoebel, M. 2015b. Meteor in action. The Meteor stack. Cited
+15.3.2017, <a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>https://manning</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>content.s3.amazonaws.com/download/4/47f88a7</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>bff9</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>4144</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b834</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue;text-decoration:none;text-underline:none'> </span></a><span
+style='color:blue'><span style='mso-spacerun:yes'></span></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.05pt;margin-left:17.75pt;text-align:left;line-height:114%'>Hochhaus,
+S. &amp; Schoebel, M. 2015c. Meteor in action. Processing in the browser:
+running on distributed platforms. Cited 10.3.2017,<a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>https://manning</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>content.s3.amazonaws.com/download/4/47f88a7</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>bff9</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>4144</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b834</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>Hochhaus,
+S. &amp; Schoebel, M. 2015d. Meteor in action. Core projects. Cited 2.3.2017, <a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>https://manning</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>content.s3.amazonaws.com/download/4/47f88a7</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>bff9</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>4144</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b834</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:.15pt;
+margin-left:18.5pt;line-height:107%'>Hochhaus, S. &amp; Schoebel, M. 2015d.
+Meteor in action. Core projects, Tracker. Cited </p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>6.3.2017,<a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>https://manning</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>content.s3.amazonaws.com/download/4/47f88a7</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>bff9</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>4144</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>-</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b834</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="https://manning-content.s3.amazonaws.com/download/4/47f88a7-bff9-4144-b834-b5ecbe6c0c17/sample_ch01_Hochhaus_Meteor.pdf"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:9.95pt;
+margin-left:18.5pt;line-height:115%'>Meteor 2017a.<span
+style='mso-spacerun:yes'> </span>Atmosphere vs. npm. Cited 21.02.2017, <a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:blue'>https://guide.meteor.com/atmosphere</span></a><a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:blue'>-</span></a><a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:blue'>vs</span></a><a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:blue'>-</span></a><a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:blue'>npm.html</span></a><a
+href="https://guide.meteor.com/atmosphere-vs-npm.html"><span style='color:black;
+text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:10.1pt;
+margin-left:18.5pt;line-height:115%'>Meteor 2017b. URLs and Routing.
+Client-side Routing. Cited 12.3.2017, <a
+href="https://guide.meteor.com/routing.html#flow-router"><span
+style='color:blue'>https://guide.meteor.com/routing.html#flow</span></a><a
+href="https://guide.meteor.com/routing.html#flow-router"><span
+style='color:blue'>-</span></a><a
+href="https://guide.meteor.com/routing.html#flow-router"><span
+style='color:blue'>router</span></a><a
+href="https://guide.meteor.com/routing.html#flow-router"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>Meteor
+2017c. Collection and Schemas. Cited 12.3.2017, <a
+href="https://guide.meteor.com/collections.html#server-collections"><span
+style='color:blue'>https://guide.meteor.com/collections.html#server</span></a><a
+href="https://guide.meteor.com/collections.html#server-collections"><span
+style='color:blue'>-</span></a><a
+href="https://guide.meteor.com/collections.html#server-collections"><span
+style='color:blue'>collections</span></a><a
+href="https://guide.meteor.com/collections.html#server-collections"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:4.7pt;margin-bottom:10.9pt;
+margin-left:18.5pt;line-height:107%'>OamkLabs 2017. Oamk LABs Research Cited
+15.02.2017,<a href="http://www.oamklabs.fi/research/"><span style='color:black;
+text-decoration:none;text-underline:none'> </span></a><a
+href="http://www.oamklabs.fi/research/"><span style='color:blue'>http://www.oamklabs.fi/research/</span></a><a
+href="http://www.oamklabs.fi/research/"><span style='color:black;text-decoration:
+none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.05pt;margin-left:17.75pt;text-align:left;line-height:114%'>Robinson
+Josh, Gray Aaron, Titarenco David 2016. Introduction to Meteor, MongoDB and
+NoSQL. Cited 6.4.2017,<a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/9781430268352"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/9781430268352"><span
+style='color:blue'>http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/9781430268352"></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/9781430268352"><span
+style='color:blue'>development/9781430268352</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/9781430268352"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:9.95pt;
+margin-left:.25in;text-indent:0in;line-height:114%'>Sahand Sadjedee, 2013.
+Meteor framework, a new approach to web development: an experimental analysis. <a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue'>http://liu.diva</span></a><a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue'>-</span></a><a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue'>portal.org/smash/get/div</span></a><a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue'>a2:691485/FULLTEXT01</span></a><a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue'>.pdf</span></a><a
+href="http://liu.diva-portal.org/smash/get/diva2:691485/FULLTEXT01.pdf"><span
+style='color:blue;text-decoration:none;text-underline:none'> </span></a>Strack,
+I. 2015a. Meteor cookbook. Introduction. Cited 15.3.2017, <a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>development/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>services/9781783280292/2dot</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>customizing</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>with</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:blue'>packages/ch02lvl1sec22_html</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:17.75pt;margin-bottom:.0001pt;text-align:left;
+line-height:115%'>Strack, I. 2015b. Meteor cookbook. Adding Meteor packages.
+Cited 29.3.2017, <a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>development/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>services/9781783280292/2dot</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>customizing</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>with</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>-</span></a></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMy
+</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:blue'>ODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/2dot-customizing-with-packages/ch02lvl1sec22_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODMyODAyOTIlMkZjaDAyczAyX2h0bWwmcXVlcnk9"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:17.75pt;text-align:left;line-height:115%'>Strack,
+I. 2015c. Meteor cookbook. Inserting templates with Spacebars. Cited 10.4.2017,
+<a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>development/web</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>services/9781783280292/3dot</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>building</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>great</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>user</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>-</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:blue'>interfaces/ch03s02_html</span></a><a
+href="http://proquest.safaribooksonline.com.ezp.oamk.fi:2048/book/web-development/web-services/9781783280292/3dot-building-great-user-interfaces/ch03s02_html"><span
+style='color:black;text-decoration:none;text-underline:none'> </span></a><span
+style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:11.0pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:10.9pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin-top:0in;margin-right:0in;
+margin-bottom:11.95pt;margin-left:0in;text-align:left;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+<p class=MsoNormal align=left style='margin:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;line-height:107%'><span
+style='mso-spacerun:yes'></span><span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'></span><br clear=all style='mso-special-character:
+line-break;page-break-before:always'>
+</p>
+
+<p class=MsoNormal style='margin:0in;margin-bottom:.0001pt;text-indent:0in;
+line-height:107%'><span style='mso-spacerun:yes'></span></p>
+
+</div>
+<div class="w3-bar">
+        
+   
+        <a href="/index.html" class="w3-bar-item w3-button">Home</a></li>
+        <a href="/backend.html" class="w3-bar-item w3-button">Back end developement</a></li>
+        <a href="/frontend.html" class="w3-bar-item w3-button">Front end developement</a></li>
+        <a href="/fullstack.html" class="w3-bar-item w3-button">Fullstack developement</a></li>
+       
+        
+        
+        
+        
+       
+        
+        
+    
+    
+    </div>
+    <div class='w3-bar'>
+       
+    <a href="myhtm.html"   class="w3-bar-item w3-button w3-white">Html</a>
+    <a href="css.html"  active class="w3-bar-item w3-button w3-white">Css</a>
+    <a href="javascript.htm" class="w3-bar-item w3-button w3-white" >Javascript</a>
+    <a href="sql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - SQL</a>
+    <a href="nosql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - NoSQL</a>
+    
+    <a href="frameworks.html"  class="w3-bar-item w3-button w3-white">Frame works and libraries</a>
+    
+    </div>
+    
+    
+    
+        <div class="w3-container w3-dark-grey">
+            <h2 class="w3-dark-grey">Useful Links</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"   class="w3-bar-item w3-button w3-white">Html documentation - mozilla</a>
+            <a href="https://www.w3.org/TR/html52/"   class="w3-bar-item w3-button w3-white">Html documentation - W3</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"   class="w3-bar-item w3-button w3-white">CSS documentation - Mozzila</a>  
+                 <a href="https://www.w3.org/Style/CSS/specs.en.html"  class="w3-bar-item w3-button w3-white">CSS Documentation - W3</a>
+                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"   class="w3-bar-item w3-button w3-white">javascript Documentation - Mozzila</a>
+    
+     
+     <a href="https://www.w3resource.com/mongodb/nosql.php"   class="w3-bar-item w3-button w3-white">nOsql documentation -  W3resource</a>
+     </div>
+     
+    
+            <div class="w3-container w3-grey">
+    
+            <p class="w3-right">Copyright &copy; White Rhino School </p>
+            <p class="w3-left w3-teal">FOUNDER : Irene . K</p>
+            <a href="disclaimer.html"   class="w3-bar-item w3-red">Disclaimer</a>
+        </div>
+
+
+</body>
+
+</html>

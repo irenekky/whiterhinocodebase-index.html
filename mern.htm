@@ -1,0 +1,2913 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Keywords" content="HTML,CSS,JavaScript,DOM,Bootstrap,
+  Web,W3C,tutorials,programming,development,training,
+  learning,quiz,primer,lessons,reference,examples,source code,colors,demos,tips,w3c">
+  <title>MERN stack</title>
+  <link rel="stylesheet" href="W3.css">
+  </head>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>CHACHA</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>CHACHA</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>39</o:TotalTime>
+  <o:Created>2021-02-28T19:43:00Z</o:Created>
+  <o:LastSaved>2021-02-28T19:43:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3092</o:Words>
+  <o:Characters>17627</o:Characters>
+  <o:Lines>146</o:Lines>
+  <o:Paragraphs>41</o:Paragraphs>
+  <o:CharactersWithSpaces>20678</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="mern_files/themedata.thmx">
+<link rel=colorSchemeMapping href="mern_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-GB</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:35.7pt;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:14.0pt;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:35.7pt;
+	text-indent:-17.85pt;
+	line-height:200%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1708875446;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-24618952 -380072128 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:35.85pt;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:71.85pt;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:107.85pt;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:143.85pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:179.85pt;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:215.85pt;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:251.85pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:287.85pt;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:323.85pt;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:35.7pt;
+	text-indent:-17.85pt;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-language:EN-US;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB>
+    <div class="w3-center">
+       <p class="w3-right">whiterhinoschool@gmail.com</p>
+    <img class="w3-logo w3-left" src="images/whiterhino.jpg"><img>
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="XRVHR3RK7J522" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+        
+
+
+
+   </div>
+        <div class="w3-bar w3-teal">
+            
+            <a href="/index.html" class="w3-bar-item w3-button">Home</a></li>
+            <a href="/backend.html" active class="w3-bar-item w3-button">Back end developement</a></li>
+            <a href="/frontend.html" class="w3-bar-item w3-button">Front end developement</a></li>
+            <a href="/fullstack.html" class="w3-bar-item w3-button w3-black">Fullstack developement</a></li>
+           
+            
+            
+            
+            
+           
+            
+            
+        
+       
+    </div>
+                
+                <div class='w3-bar'>
+           
+                    <a href="myhtm.html"   class="w3-bar-item w3-button w3-white">Html</a>
+                    <a href="css.html"  active class="w3-bar-item w3-button w3-white">Css</a>
+                    <a href="javascript.htm" class="w3-bar-item w3-button w3-black" >Javascript</a>
+                    <a href="sql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - SQL</a>
+                    <a href="nosql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - NoSQL</a>
+                    <a href="frameworks.html"  class="w3-bar-item w3-button w3-white">Frame works and libraries</a>
+            
+                    </div>
+                 
+
+<div class=WordSection1>
+
+
+
+<div class="w3-container w3-center">
+
+
+<a href="mean.htm" class="w3-button  w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E .  A . N stack</a>&nbsp; &nbsp;
+
+
+
+<a href="mern.htm" class="w3-button w3-black w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E .  R . N stack</a>&nbsp; &nbsp;
+
+<a href="mevn.htm" class="w3-button w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">M . E. V. N stack</a>&nbsp; &nbsp;
+
+<a href="meteorjs.htm" class="w3-button w3-center w3-hover-black 3-white w3-border 
+w3-xlarge w3-round-large w3-border-teal">METEOR.JS</a>&nbsp; &nbsp;
+
+
+<h1 class="w3-center" />M.E.R.N stack
+
+
+
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>What is the MERN
+Stack?<o:p></o:p></b></p>
+
+<p class=MsoNormal>MERN stands for MongoDB, Express, React, Node, after the
+four key technologies that make up the stack.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>MongoDB - document database<o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>Express(</span>.<span class=SpellE>js</span>)
+- Node.js web framework<o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>React(</span>.<span class=SpellE>js</span>)
+- a client-side JavaScript framework<o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>Node(</span>.<span class=SpellE>js</span>)
+- the premier JavaScript web server<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>MERN is one of several variations of the MEAN stack (MongoDB
+Express Angular Node), where the traditional Angular.js frontend framework <span
+class=GramE>is replaced</span> with React.js. Other variants include MEVN
+(MongoDB, Express, <span class=SpellE>Vue</span>, Node), and really any
+frontend JavaScript framework can work.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Express and Node make up the middle (application) tier.
+Express.js is a server-side web framework, and Node.js the popular and powerful
+JavaScript server platform. Regardless of which variant you choose, <span
+class=GramE>ME(</span>RVA)N is the ideal approach to working with JavaScript
+and JSON, all the way through.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>How does the MERN
+stack work?<o:p></o:p></b></p>
+
+<p class=MsoNormal>The MERN architecture allows you to easily construct a
+3-tier architecture (frontend, backend, database) entirely using JavaScript and
+JSON.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE>Mern</span> Stack<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>React.js Front End<o:p></o:p></b></p>
+
+<p class=MsoNormal>The top tier of the MERN stack is React.js, the declarative
+JavaScript framework for creating dynamic client-side applications in HTML.
+React lets you build up complex interfaces through simple Components, connect
+them to data on your backend server, and render them as HTML.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE>Reacts</span> strong suit is handling <span
+class=SpellE>stateful</span>, data-driven interfaces with minimal code and
+minimal pain, and it has all the bells and whistles <span class=GramE>youd</span>
+expect from a modern web framework: great support for forms, error handling,
+events, lists, and more.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Express.js and
+Node.js Server Tier<o:p></o:p></b></p>
+
+<p class=MsoNormal>The next level down is the Express.js server-side framework,
+running inside a Node.js server. Express.js bills itself as a fast, <span
+class=SpellE>unopinionated</span>, minimalist web framework for Node.js, and
+that is indeed <span class=GramE>exactly</span> what it is. Express.js has
+powerful models for URL routing (matching an incoming URL with a server
+function), and handling HTTP requests and responses.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>By making XML HTTP Requests (XHRs) or GETs or POSTs from
+your React.js front-end, you can connect to Express.js functions that power
+your application. Those functions in turn use MongoDBs Node.js drivers, either
+via <span class=SpellE>callbacks</span> for using Promises, to access and
+update data in your MongoDB database.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>MongoDB Database Tier<o:p></o:p></b></p>
+
+<p class=MsoNormal>If your application stores any data (user profiles, content,
+comments, uploads, events, etc.), then youre going to want a database thats
+just as easy to work with as React, Express, and Node.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE>Thats</span> where MongoDB comes in: JSON
+documents created in your React.js front end can be sent to the Express.js
+server, where they can be processed and (assuming theyre valid) stored
+directly in MongoDB for later retrieval. Again, if <span class=GramE>youre</span>
+building in the cloud, youll want to look at Atlas. If <span class=GramE>youre</span>
+looking to set up your own MERN stack, read on!<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Is MERN a full-stack
+solution?<o:p></o:p></b></p>
+
+<p class=MsoNormal>Yes, MERN is a full-stack, following the traditional 3-tier
+architectural pattern, including the front-end display tier (React.js),
+application tier (Express.js and Node.js), and database tier (MongoDB).<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Why choose the MERN
+stack?<o:p></o:p></b></p>
+
+<p class=MsoNormal><span class=GramE>Lets</span> start with MongoDB, the
+document database at the root of the MERN stack. MongoDB was designed to store
+JSON data natively (it technically uses a binary version of JSON called BSON),
+and everything from its command line interface to its query language (MQL, or
+MongoDB Query Language) is built on JSON and JavaScript.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>MongoDB works extremely well with Node.js, and makes
+storing, manipulating, and representing JSON data at every tier of your
+application incredibly easy. For cloud-native applications, MongoDB Atlas makes
+it even easier, by giving you an auto-scaling MongoDB cluster on the cloud
+provider of your choice, as easy as a few button clicks.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Express.js (running on Node.js) and React.js make the
+JavaScript/JSON application MERN full stack, well, full. Express.js is a
+server-side application framework that wraps HTTP requests and responses, and
+makes it easy to map URLs to server-side functions. React.js is a frontend
+JavaScript framework for building interactive user interfaces in HTML, and
+communicating with a remote server.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The combination means that JSON data flows naturally from
+front to back, making it fast to build on and reasonably simple to debug. <span
+class=GramE>Plus</span>, you only have to know one programming language, and
+the JSON document structure, to understand the whole system!<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>MERN is the stack of choice for todays web developers
+looking to move quickly, particularly for those with React.js experience.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>MERN Use Cases<o:p></o:p></b></p>
+
+<p class=MsoNormal>Like any web stack, you can build whatever you want in MERN
+- though <span class=GramE>its</span> ideally suited for cases that are
+JSON-heavy, cloud-native, and that have dynamic web interfaces.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A few examples might <span class=GramE>be:</span> - Workflow
+management - News aggregation - <span class=SpellE>Todo</span> apps and
+Calendars - Interactive forums / social products<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE>And</span> whatever else you can dream up!</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Prerequisites<o:p></o:p></b></p>
+
+<p class=MsoNormal>To follow along with this tutorial, you will need to install
+node and <span class=SpellE>npm</span> on your computer. If you do not have
+node installed, follow the instructions on the <span class=SpellE>nodejs</span>
+website. You will also need a code editor that you are familiar with,
+preferably one that has support for JavaScript code highlighting.</p>
+
+<p class=MsoNormal>Application Code Setup<o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>Lets</span> start with the setup. Open
+your terminal and create a new file directory in any <span class=SpellE>convienient</span>
+location on your local machine. You can name it anything but in this example it
+<span class=GramE>is called</span> <span class=SpellE>Todo</span>.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>mkdir</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>Todo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Now enter into that file directory<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>cd</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>Todo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>The next step is to initialize the project with a <span
+class=SpellE>package.json</span> file. This file will contain some information
+about our app and the dependencies that it needs to run. You can use <span
+class=SpellE><i style='mso-bidi-font-style:normal'>npm</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>init</span></i> and
+follow the instructions when prompted, or you can use <span class=SpellE><i
+style='mso-bidi-font-style:normal'>npm</i></span><i style='mso-bidi-font-style:
+normal'> <span class=SpellE>init</span> -<span class=SpellE>yto</span> use the
+default values.</i><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Node Server Setup<o:p></o:p></b></p>
+
+<p class=MsoNormal>To run our <span class=SpellE>javascript</span> code on the
+backend we need to spin up a server that will compile our code. The server <span
+class=GramE>can be created</span> in two ways: first is to use the built in
+http module in node; second is to make use of the <span class=SpellE>expressjs</span>
+framework.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This tutorial will use <span class=SpellE>expressjs</span>.
+It is a <span class=SpellE>nodejs</span> HTTP framework that handles <span
+class=GramE>a lot of</span> things out of the box and requires very little code
+to create fully functional RESTful APIs. To use express, install it using <span
+class=SpellE>npm</span>:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install
+express<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Next, install the <span class=SpellE>dotenv</span> module,
+it allows you to load environment variables from <span class=GramE>a</span> .<span
+class=SpellE>env</span> file into <span class=SpellE>process.env</span>:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install <span
+class=SpellE>dotenv</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Now create a file <span class=GramE>index.js and type the
+code below into it</span> and save:<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> express =
+require('express');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>require(</i></span><i
+style='mso-bidi-font-style:normal'>'<span class=SpellE>dotenv</span>').<span
+class=SpellE>config</span>();<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> app =
+express();<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> port = <span
+class=SpellE>process.env.PORT</span> || 5000;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>(<span class=SpellE>req</span>,
+res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Headers&quot;, &quot;Origin,
+X-Requested-With, Content-Type, Accept&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>next(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>(<span class=SpellE>req</span>,
+res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.send</span></span><span
+class=GramE>(</span>'Welcome to Express');<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.listen</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>port, () =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>console.log(</span>`Server
+running on port ${port}`)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>This snipped from the code above helps handle CORS related
+issues that you might face when trying to access the <span class=SpellE><span
+class=GramE>api</span></span> from different domains during development and
+testing:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>(<span class=SpellE>req</span>,
+res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Headers&quot;, &quot;Origin,
+X-Requested-With, Content-Type, Accept&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>next(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal><span class=GramE>Its</span> time to start our server to
+see if it works. Open your terminal in the same directory as your index.js file
+and type:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>node</i></span><i
+style='mso-bidi-font-style:normal'> index.js<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>If <span class=SpellE>every thing</span> goes well, you
+should see Server running on port 5000 in your terminal.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Routes<o:p></o:p></b></p>
+
+<p class=MsoNormal><span class=GramE>There are three things that the app needs
+to do: create a task; view all tasks; and delete a completed task.</span> For
+each task, we need to create routes that will define various endpoints that the
+<span class=SpellE>todo</span> app will depend on. So <span class=GramE>lets</span>
+create a folder routes and create a file api.js with the following code in it.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>mkdir</i></span></span><i style='mso-bidi-font-style:normal'> routes<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Edit api.js and paste the following code in it:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> express =
+require ('express');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> router = <span
+class=SpellE>express.Router</span>();<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.get</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.post</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.delete</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>/:id',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'>module.exports</i></span><i
+style='mso-bidi-font-style:normal'> = router;<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Models<o:p></o:p></b></p>
+
+<p class=MsoNormal>Now comes the interesting part, since the app is going to
+make use of <span class=SpellE><span class=GramE>mongodb</span></span><span
+class=GramE> which</span> is a <span class=SpellE>noSql</span> database, we
+need to create a model and a schema. Models <span class=GramE>are defined</span>
+using the Schema interface. The Schema allows you to define the fields stored
+in each document along with their validation requirements and default values.
+In <span class=GramE>essence</span> the Schema is a blueprint of how the
+database will be constructed. In addition, you can define static and instance
+helper methods to make it easier to work with your data types, <span
+class=GramE>and also</span> virtual properties that you can use like any other
+field, but which arent actually stored in the database.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>To create a Schema and a model, install <span class=GramE>mongoose
+which</span> is a node package that makes working with <span class=SpellE>mongodb</span>
+easier.<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install
+mongoose<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Create a new folder in your root directory and name it
+models. Inside it create a file and name it todo.js with the following code in
+it:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>mkdir</i></span></span><i style='mso-bidi-font-style:normal'> models<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Paste the following into todo.js with your text editor:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> mongoose
+= require('mongoose');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> Schema = <span
+class=SpellE>mongoose.Schema</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>//create schema for <span
+class=SpellE>todo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>TodoSchema</span> = new Schema({<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>action</span>: {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>type</span>: String,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>required</span>: [true,
+'The <span class=SpellE>todo</span> text field is required']<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>//create model for <span
+class=SpellE>todo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>Todo</span> = <span class=SpellE>mongoose.model</span>('<span
+class=SpellE>todo</span>', <span class=SpellE>TodoSchema</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'>module.exports</i></span><i
+style='mso-bidi-font-style:normal'> = <span class=SpellE>Todo</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Now we need to update our routes to make use of the new
+model.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> express =
+require ('express');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> router = <span
+class=SpellE>express.Router</span>();<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>Todo</span> = require('../models/<span class=SpellE>todo</span>');<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.get</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>//this will return all the data, exposing
+only the id and action field to the client<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>Todo.find</span></span><span
+class=GramE>(</span>{}, 'action')<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>data =&gt; <span
+class=SpellE>res.json</span>(data))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>next)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.post</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>if(</span><span
+class=SpellE>req.body.action</span>){<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>Todo.create</span></span><span
+class=GramE>(</span><span class=SpellE>req.body</span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>data =&gt;
+<span class=SpellE>res.json</span>(data))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>next)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>}else</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.json</span></span><span
+class=GramE>({</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>error</span>: &quot;The
+input field is empty&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>router.delete</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>todos</span>/:id',
+(<span class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>Todo.findOneAndDelete</span></span><span
+class=GramE>(</span>{&quot;_id&quot;: req.params.id})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>data =&gt; <span
+class=SpellE>res.json</span>(data))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>next)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'>module.exports</i></span><i
+style='mso-bidi-font-style:normal'> = router;<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Database<o:p></o:p></b></p>
+
+<p class=MsoNormal>We need a database where we will store our data. For <span
+class=GramE>this</span> we will make use of <span class=SpellE>mlab</span>.
+Follow this doc to get started with <span class=SpellE>mlab</span>. After
+setting up your <span class=GramE>database</span> you need to update index.js
+file with the following code:<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> express =
+require('express');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>bodyParser</span> = require('body-parser');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> mongoose
+= require('mongoose');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> routes =
+require('./routes/<span class=SpellE>api</span>');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> path =
+require('path');<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>require(</i></span><i
+style='mso-bidi-font-style:normal'>'<span class=SpellE>dotenv</span>').<span
+class=SpellE>config</span>();<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> app =
+express();<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> port = <span
+class=SpellE>process.env.PORT</span> || 5000;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>//connect to the
+database<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>mongoose.connect</i></span></span><span class=GramE><i
+style='mso-bidi-font-style:normal'>(</i></span><span class=SpellE><i
+style='mso-bidi-font-style:normal'>process.env.DB</i></span><i
+style='mso-bidi-font-style:normal'>, { <span class=SpellE>useNewUrlParser</span>:
+true })<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>() =&gt;
+console.log(`Database connected successfully`))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>err =&gt;
+console.log(err));<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>//since mongoose
+promise is depreciated, we <span class=SpellE>overide</span> it with node's
+promise<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'>mongoose.Promise</i></span><i
+style='mso-bidi-font-style:normal'> = <span class=SpellE>global.Promise</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>(<span class=SpellE>req</span>,
+res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>res.header</span></span><span
+class=GramE>(</span>&quot;Access-Control-Allow-Headers&quot;, &quot;Origin,
+X-Requested-With, Content-Type, Accept&quot;);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>next(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><span class=SpellE><i style='mso-bidi-font-style:normal'>bodyParser.json</i></span><i
+style='mso-bidi-font-style:normal'>());<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>'/<span class=SpellE>api</span>',
+routes);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.use</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>(err, <span
+class=SpellE>req</span>, res, next) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>console.log(</span>err);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>next(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>app.listen</i></span></span><span class=GramE><i style='mso-bidi-font-style:
+normal'>(</i></span><i style='mso-bidi-font-style:normal'>port, () =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>console.log(</span>`Server
+running on port ${port}`)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>});<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>In the code <span class=GramE>above</span> we made use of <span
+class=SpellE>process.env</span> to access environment variables, which need to
+be created. Create a file in your root directory with name .<span class=SpellE>env</span>
+and edit:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>DB = <span
+class=GramE><span class=SpellE>mongodb</span>:</span>//&lt;USER\&gt;:&lt;PASSWORD\&gt;@ds039950.mlab.com:39950/<span
+class=SpellE>todo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Make sure you use your own <span class=SpellE>mongodb</span>
+URL from <span class=SpellE>mlab</span> after you created your database and
+user. Replace &lt;USER&gt; with the username and &lt;PASSWORD&gt; with the
+password of the user you created. To work with environment variable we have to
+install a node package called <span class=SpellE>dotenv</span> that makes sure
+we have access to environment variable stored in the .<span class=SpellE>env</span>
+file.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install <span
+class=SpellE>dotenv</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Then require and configure it in index.js:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>require(</i></span><i
+style='mso-bidi-font-style:normal'>'<span class=SpellE>dotenv</span>').<span
+class=SpellE>config</span>()<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Using environment variables instead of writing credentials
+to the application code directly can hide sensitive information from our
+versioning system. It <span class=GramE>is considered</span> a best practice to
+separate configuration and secret data from application code in this manner.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Testing <span
+class=SpellE><span class=GramE>Api</span></span><o:p></o:p></b></p>
+
+<p class=MsoNormal>This is the part we start trying out things to make sure our
+RESTful <span class=SpellE><span class=GramE>api</span></span> is working.
+Since our frontend is not ready yet, we can make use of some <span
+class=SpellE><span class=GramE>api</span></span> development clients to test
+our code. You can use of Postman or Insomnia or if there is another client that
+you prefer for testing APIs, you can use of it.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Start your server using the command:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>node</i></span><i
+style='mso-bidi-font-style:normal'> index.js<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Now open your client, create a get method and navigate to
+http://localhost:5000/api/todos<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A screenshot of the Insomnia REST client<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>You should test all the <span class=SpellE><span
+class=GramE>api</span></span> endpoints and make sure they are working. For the
+endpoints that require body, you should send <span class=SpellE>json</span>
+back with the necessary fields since <span class=GramE>its</span> what we
+setup in our code.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Creating the Frontend<o:p></o:p></b></p>
+
+<p class=MsoNormal>Since we are done with the functionality we want from our <span
+class=SpellE><span class=GramE>api</span></span>, it is time to create an
+interface for the client to interact with the <span class=SpellE>api</span>. To
+start out with the frontend of the <span class=SpellE>todo</span> app, we will
+use the create-react-app command to scaffold our app.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In the same root directory as your backend code, which is
+the <span class=SpellE>todo</span> directory, run:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>create-react-app</i></span><i
+style='mso-bidi-font-style:normal'> client<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>This will create a new folder in your <span class=SpellE>todo</span>
+directory called client, where you will add all the react code.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Running the React App<o:p></o:p></b></p>
+
+<p class=MsoNormal>Before testing the react app, there are a number of
+dependencies that need to <span class=GramE>be installed</span>.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Install concurrently as a dev dependency:<o:p></o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install
+concurrently --save-dev<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Concurrently <span class=GramE>is used</span> to run more
+than one command simultaneously from the same terminal window.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Install <span
+class=SpellE>nodemon</span> as a dev dependency:<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install <span
+class=SpellE>nodemon</span> --save-dev<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal><span class=SpellE>Nodemon</span> <span class=GramE>is used</span>
+to run the server and monitor it as well. If there is any change in the server
+code, <span class=SpellE>nodemon</span> will restart it automatically with the
+new changes.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Open your <span class=SpellE>package.json</span> file in the
+root folder of the app project, and paste the following code<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>{<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>name</span>&quot;: &quot;<span class=SpellE>todo</span>&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>version</span>&quot;: &quot;1.0.0&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>description</span>&quot;: &quot;building <span class=SpellE>todo</span>
+app using <span class=SpellE>mongodb</span>, express, react and <span
+class=SpellE>nodejs</span>&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>main</span>&quot;: &quot;index.js&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>scripts</span>&quot;: {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>start</span>&quot;: &quot;node index.js&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>start-watch</span>&quot;: &quot;<span class=SpellE>nodemon</span>
+index.js&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;dev&quot;:
+&quot;concurrently \&quot;yarn run start-watch\&quot; \&quot;cd client
+&amp;&amp; yarn start\&quot;&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>},<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>author</span>&quot;: &quot;<span class=SpellE>Ojini</span>
+Jude&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>license</span>&quot;: &quot;MIT&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>dependencies</span>&quot;: {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;body-parser&quot;:
+&quot;^1.18.3&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=SpellE><span class=GramE>dotenv</span></span>&quot;: &quot;^6.1.0&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>express</span>&quot;: &quot;^4.16.4&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>mongoose</span>&quot;: &quot;^5.3.6&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>},<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=SpellE><span class=GramE>devDependencies</span></span>&quot;: {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>concurrently</span>&quot;: &quot;^4.0.1&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=SpellE><span class=GramE>nodemon</span></span>&quot;: &quot;^1.18.4&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Enter into the client folder, then locate the <span
+class=SpellE>package.json</span> file and add the key value pair below inside
+it. This proxy setup in our <span class=SpellE>package.json</span> file will
+enable us make <span class=SpellE><span class=GramE>api</span></span> calls
+without having to type the full <span class=SpellE>url</span>, just /<span
+class=SpellE>api</span>/<span class=SpellE>todos</span> will get all our <span
+class=SpellE>todos</span><o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>&quot;<span
+class=GramE>proxy</span>&quot;: &quot;http://localhost:5000&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Open your <span class=GramE>terminal and run <span
+class=SpellE>npm</span> run dev</span> and make sure you are in the <span
+class=SpellE>todo</span> directory and not in the client directory. Your app
+should be open and running on localhost<span class=GramE>:3000</span>.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Creating your React
+Components<o:p></o:p></b></p>
+
+<p class=MsoNormal>One of the advantages of react is that it makes use of
+components, which are reusable <span class=GramE>and also</span> makes code
+modular. For our <span class=SpellE>todo</span> app, there will be two state
+components and one stateless component. Inside your <span class=SpellE>src</span>
+folder create another folder called components and inside it create three files
+Input.js, ListTodo.js and Todo.js.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Open Input.js file and paste the following<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> React, { Component } from 'react';<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>axios</span> from '<span
+class=SpellE>axios</span>';<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>class</i></span><i
+style='mso-bidi-font-style:normal'> Input extends Component {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>state</span> = {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>action</span>:
+&quot;&quot;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>addTodo</span></span>
+= () =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>const</span></span>
+task = {action: <span class=SpellE>this.state.action</span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>if(</span><span
+class=SpellE>task.action</span> &amp;&amp; <span class=SpellE>task.action.length</span>
+&gt; 0){<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>axios.post</span></span><span
+class=GramE>(</span>'/<span class=SpellE>api</span>/<span class=SpellE>todos</span>',
+task)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>res
+=&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>if(</span><span
+class=SpellE>res.data</span>){<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span
+class=GramE>this.props.getTodos</span></span><span class=GramE>(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span
+class=GramE>this.setState</span></span><span class=GramE>(</span>{action:
+&quot;&quot;})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>err
+=&gt; console.log(err))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>}else</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>console.log(</span>'input
+field required')<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>handleChange</span></span>
+= (e) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'></span><span
+class=SpellE><span class=GramE>this.setState</span></span><span class=GramE>({</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>action</span>: <span
+class=SpellE>e.target.value</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>render(</span>) {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>let</span> { action } = <span
+class=SpellE>this.state</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return</span> (<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=GramE>div</span>&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;input type=&quot;text&quot; <span
+class=SpellE>onChange</span><span class=GramE>={</span><span class=SpellE>this.handleChange</span>}
+value={action} /&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;button <span class=SpellE>onClick</span><span
+class=GramE>={</span><span class=SpellE>this.addTodo</span>}&gt;add <span
+class=SpellE>todo</span>&lt;/button&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;/div&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>export</i></span><i
+style='mso-bidi-font-style:normal'> default Input<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>To make use of <span class=SpellE>axios</span>, which is a
+Promise based HTTP client for the browser and node.js, you need to cd into your
+client from your terminal and run yarn add <span class=SpellE>axios</span> or <span
+class=SpellE>npm</span> install <span class=SpellE>axios</span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>cd</i></span><i
+style='mso-bidi-font-style:normal'> client<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>npm</i></span></span><i style='mso-bidi-font-style:normal'> install <span
+class=SpellE>axios</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>After that open your ListTodo.js file and paste the
+following code<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> React from 'react';<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> <span
+class=SpellE>ListTodo</span> = ({ <span class=SpellE>todos</span>, <span
+class=SpellE>deleteTodo</span> }) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return</span> (<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=SpellE><span class=GramE>ul</span></span>&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>{<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>todos</span></span>
+&amp;&amp;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>todos.length</span></span>
+&gt; 0 ?<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>(<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span
+style='mso-spacerun:yes'></span><span class=SpellE><span class=GramE>todos.map</span></span><span
+class=GramE>(</span><span class=SpellE>todo</span> =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return</span>
+(<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;li key<span class=GramE>={</span><span
+class=SpellE>todo</span>._id} <span class=SpellE>onClick</span>={() =&gt; <span
+class=SpellE>deleteTodo</span>(<span class=SpellE>todo</span>._id)}&gt;{<span
+class=SpellE>todo.action</span>}&lt;/li&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>:<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>(<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=GramE>li&gt;</span>No
+<span class=SpellE>todo</span>(s) left&lt;/li&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;/<span class=SpellE>ul</span>&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>export</i></span><i
+style='mso-bidi-font-style:normal'> default <span class=SpellE>ListTodo</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Then in your Todo.js <span class=GramE>file</span> you write
+the following code<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> React, {Component} from 'react';<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>axios</span> from '<span
+class=SpellE>axios</span>';<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> Input from './Input';<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>ListTodo</span> from './<span
+class=SpellE>ListTodo</span>';<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>class</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>Todo</span> extends
+Component {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>state</span> = {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>todos</span></span>:
+[]<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>componentDidMount</span></span></i><span
+class=GramE>(</span>){<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>this.getTodos</span></span><span
+class=GramE>(</span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>getTodos</span></span>
+= () =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>axios.get</span></span><span
+class=GramE>(</span>'/<span class=SpellE>api</span>/<span class=SpellE>todos</span>')<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>res =&gt;
+{<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>if(</span><span
+class=SpellE>res.data</span>){<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>this.setState</span></span><span
+class=GramE>({</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span
+class=GramE>todos</span></span>: <span class=SpellE>res.data</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>err =&gt;
+console.log(err))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>deleteTodo</span></span>
+= (id) =&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>axios.delete</span></span><span
+class=GramE>(</span>`/<span class=SpellE>api</span>/<span class=SpellE>todos</span>/${id}`)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>then(</span>res =&gt;
+{<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>if(</span><span
+class=SpellE>res.data</span>){<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>this.getTodos</span></span><span
+class=GramE>()</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>})<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.<span class=GramE>catch(</span>err =&gt;
+console.log(err))<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>render(</span>) {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>let</span> { <span
+class=SpellE>todos</span> } = <span class=SpellE>this.state</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return(</span><o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=GramE>div</span>&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;h1&gt;My <span class=SpellE>Todo</span>(s<span
+class=GramE>)&lt;</span>/</i>h1&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;Input <span class=SpellE>getTodos</span><span
+class=GramE>={</span><span class=SpellE>this.getTodos</span>}/&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=SpellE>ListTodo</span> <span
+class=SpellE>todos</span><span class=GramE>={</span><span class=SpellE>todos</span>}
+<span class=SpellE>deleteTodo</span>={<span class=SpellE>this.deleteTodo</span>}/&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;/div&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>)<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>export</i></span><i
+style='mso-bidi-font-style:normal'> default <span class=SpellE>Todo</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>We need to make little adjustment to our react code. Delete
+the logo and adjust our App.js to look like this.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> React from 'react';<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> <span class=SpellE>Todo</span> from
+'./components/<span class=SpellE>Todo</span>';<o:p></o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>import</i></span><i
+style='mso-bidi-font-style:normal'> './App.css';<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>const</i></span></span><i style='mso-bidi-font-style:normal'> App = ()
+=&gt; {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>return</span> (<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;div <span class=SpellE>className</span>=&quot;App&quot;&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;<span class=SpellE>Todo</span> /&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&lt;/div&gt;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>export</i></span><i
+style='mso-bidi-font-style:normal'> default App</i>;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Then paste the following code into App.css:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>.App {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>text-</span>align: <span
+class=SpellE>center</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-size</span>: <span
+class=SpellE>calc</span>(10px + 2vmin);<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 60%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-left</span>: auto;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-right</span>: auto;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>input</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>height</span>: 40px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 50%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border-bottom</span>: 2px
+#101113 solid;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>background</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-size</span>: 1.5rem;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>color</span></span>:
+#787a80;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>input:</i></span><i style='mso-bidi-font-style:normal'>focus</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>outline</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>button</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 25%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>height</span>: 45px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-left</span>: 10px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-size</span>: 25px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>background</span>: #101113;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border-radius</span>: 5px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>color</span></span>:
+#787a80;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>cursor</span>: pointer;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>button:</i></span><i style='mso-bidi-font-style:normal'>focus</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>outline</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><i style='mso-bidi-font-style:
+normal'>ul</i></span></span><i style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>list-style</span>: none;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>text-</span>align: left;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>padding</span>: 15px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>background</span>: #171a1f;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border-radius</span>: 5px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>li</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>padding</span>: 15px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-size</span>: 1.5rem;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-bottom</span>: 15px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>background</span>: #282c34;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>border-radius</span>: 5px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>overflow-wrap</span>:
+break-word;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>cursor</span>: pointer;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>@media only screen and
+(min-width: 300px) {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.App {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 80%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>input</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 100%<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>button</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 100%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-top</span>: 15px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-left</span>: 0;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal>}<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>@media only screen and
+(min-width: 640px) {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>.App {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 60%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><o:p>&nbsp;</o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>input</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 50%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>button</span> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>width</span>: 30%;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-left</span>: 10px;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin-top</span>: 0;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'></span><o:p></o:p></p>
+
+<p class=MsoNormal>Also in <span class=GramE>index.css</span> add the following
+rules:<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>body</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>margin</span>: 0;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>padding</span>: 0;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-family</span>:
+-apple-system, <span class=SpellE>BlinkMacSystemFont</span>, &quot;Segoe
+UI&quot;, &quot;<span class=SpellE>Roboto</span>&quot;, &quot;Oxygen&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>&quot;Ubuntu&quot;, &quot;<span
+class=SpellE>Cantarell</span>&quot;, &quot;<span class=SpellE>Fira</span>
+Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica <span class=SpellE>Neue</span>&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>sans-serif</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>-<span class=SpellE>webkit</span>-font-smoothing:
+<span class=SpellE>antialiased</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span>-<span class=SpellE><span class=GramE>moz</span></span><span
+class=GramE>-</span><span class=SpellE>osx</span>-font-smoothing: grayscale;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>box-sizing</span>:
+border-box;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>background-<span
+class=SpellE>color</span></span>: #282c34;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=SpellE><span class=GramE>color</span></span>:
+#787a80;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><i style='mso-bidi-font-style:normal'>code</i></span><i
+style='mso-bidi-font-style:normal'> {<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>font-family</span>:
+source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;,<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'> </span><span class=GramE>monospace</span>;<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>}<o:p></o:p></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='mso-spacerun:yes'></span><o:p></o:p></i></p>
+
+<p class=MsoNormal>Assuming no errors when saving all these files, the <span
+class=SpellE>todo</span> app should be ready and fully functional with the
+functionality discussed earlier: creating a task, deleting a task and viewing
+all your tasks.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Conclusion<o:p></o:p></p>
+
+<p class=MsoNormal>In this tutorial, you created a <span class=SpellE>todo</span>
+app using the MERN stack. You wrote a frontend application using React that
+communicates with a backend application written using <span class=SpellE>expressjs</span>.
+You also created a <span class=SpellE>Mongodb</span> backend for storing tasks
+in a database.</p>
+
+</div>
+<div class="w3-bar">
+        
+   
+        <a href="/index.html" class="w3-bar-item w3-button">Home</a></li>
+        <a href="/backend.html" class="w3-bar-item w3-button">Back end developement</a></li>
+        <a href="/frontend.html" class="w3-bar-item w3-button">Front end developement</a></li>
+        <a href="/fullstack.html" class="w3-bar-item w3-button">Fullstack developement</a></li>
+       
+        
+        
+        
+        
+       
+        
+        
+    
+    
+    </div>
+    <div class='w3-bar'>
+       
+    <a href="myhtm.html"   class="w3-bar-item w3-button w3-white">Html</a>
+    <a href="css.html"  active class="w3-bar-item w3-button w3-white">Css</a>
+    <a href="javascript.htm" class="w3-bar-item w3-button w3-white" >Javascript</a>
+    <a href="sql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - SQL</a>
+    <a href="nosql.htm" class="w3-bar-item w3-button w3-white" >DATABASE - NoSQL</a>
+    
+    <a href="frameworks.html"  class="w3-bar-item w3-button w3-white">Frame works and libraries</a>
+    
+    </div>
+    
+    
+    
+        <div class="w3-container w3-dark-grey">
+            <h2 class="w3-dark-grey">Useful Links</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"   class="w3-bar-item w3-button w3-white">Html documentation - mozilla</a>
+            <a href="https://www.w3.org/TR/html52/"   class="w3-bar-item w3-button w3-white">Html documentation - W3</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"   class="w3-bar-item w3-button w3-white">CSS documentation - Mozzila</a>  
+                 <a href="https://www.w3.org/Style/CSS/specs.en.html"  class="w3-bar-item w3-button w3-white">CSS Documentation - W3</a>
+                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"   class="w3-bar-item w3-button w3-white">javascript Documentation - Mozzila</a>
+    
+     
+     <a href="https://www.w3resource.com/mongodb/nosql.php"   class="w3-bar-item w3-button w3-white">nOsql documentation -  W3resource</a>
+     </div>
+     
+    
+            <div class="w3-container w3-grey">
+    
+            <p class="w3-right">Copyright &copy; White Rhino School </p>
+            <p class="w3-left w3-teal">FOUNDER : Irene . K</p>
+            <a href="disclaimer.html"   class="w3-bar-item w3-red">Disclaimer</a>
+        </div>
+
+
+</body>
+
+</html>
